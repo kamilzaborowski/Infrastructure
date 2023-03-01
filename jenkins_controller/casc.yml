@@ -21,7 +21,6 @@ credentials:
       - basicSSHUserPrivateKey:
           id: "jenkins_agent"
           username: "jenkins"
-          passphrase: "Twojstarytoryba__92"
           privateKeySource:
             directEntry:
               privateKey: |
@@ -71,9 +70,9 @@ tool:
     - name: "SonarQube"
       properties:
       - installSource:
-        installers:
-        - sonarRunnerInstaller:
-            id: "4.7.0.2747"
+          installers:
+          - sonarRunnerInstaller:
+              id: "4.7.0.2747"
 
 unclassified:
   sonarGlobalConfiguration:
