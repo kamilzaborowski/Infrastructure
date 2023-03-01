@@ -1,0 +1,14 @@
+credentials:
+  system:
+    domaincredentials:
+      - credentials:
+        - usernamePassword:
+          username: "panda"
+          password: "panda"
+          scope: GLOBAL
+globalMatrix:  
+  - permissions:
+    - "Overall/Administer"
+Node:
+  - permanent:
+    - numExecutors: 0
