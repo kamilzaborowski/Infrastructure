@@ -1,14 +1,11 @@
-credentials:
-  system:
-    domaincredentials:
-      - credentials:
-        - usernamePassword:
-          username: "panda"
+jenkins:
+  securityRealm:
+    local:
+      users:
+        - id: "panda"
           password: "panda"
-          scope: GLOBAL
-globalMatrix:  
-  - permissions:
-    - "Overall/Administer"
-Node:
-  - permanent:
-    - numExecutors: 0
+  authorizationStrategy:
+    globalMatrix:
+      permissions:
+        - "Overall/Administer:panda"
+  numExecutors: 0
