@@ -9,9 +9,12 @@ jenkins:
       permissions:
         - "Overall/Administer:panda"
   numExecutors: 0
-  credentials:
-    usernamePassword:
-      - username: admin
-      - password: password
-      - id: artifactory
-      - scope: GLOBAL
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - usernamePassword:
+          id: "artifactory"
+          username: "admin"
+          password: "password"
+          scope: GLOBAL
