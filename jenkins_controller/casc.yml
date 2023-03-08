@@ -2,13 +2,26 @@ jenkins:
   securityRealm:
     local:
       users:
-        - id: "panda"
-          password: "panda"
+       - id: "panda"
+         password: "panda"
   authorizationStrategy:
     globalMatrix:
       permissions:
         - "Overall/Administer:panda"
   numExecutors: 0
+  nodes:
+  - permanent:
+      labelString: "agent"
+      launcher:
+        ssh:
+          credentialsId: "jenkins_agent"
+          host: "192.168.44.44"
+          port: 2222
+          sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
+      name: "agent"
+      remoteFS: "/home/jenkins/agent"
+      retentionStrategy: "always"
+ 
 credentials:
   system:
     domainCredentials:
@@ -25,43 +38,42 @@ credentials:
             directEntry:
               privateKey: |
                 -----BEGIN OPENSSH PRIVATE KEY-----
-                b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABA7l+I5y5
-                +OLro6QdZSmUuLAAAAEAAAAAEAAAGXAAAAB3NzaC1yc2EAAAADAQABAAABgQCjoVLX9S9F
-                kCvhfFAnkcDPzX1RVIbkioBvCGq+YYNTyo1j3Z0D6x4EkYREnjXN3FbdD0hef67qevyHpx
-                BGzAR/Ze8aW5ETGdCAhQ/nip6rmFJvju1C1ilO19NlJmXK9iLRrLlS7vbmLzYmnf9S3vpn
-                GGjrP8O4BYmtmB8en9Sr1TSBqj6XcDBcoACu90Pitcf6EB09z66E8zUt0Vs1ADKI3E+IxK
-                dXt5BIKSxQz5GLAbnI52w14xxvz4W5A36NBHS5R2ckAawC35XFmV///BZKNldsDDOxsz0v
-                mT3MGy3LTGpzAQEwevkO3kf8S1+zsTSQIxwObBRGl7YIMNlinmC4f4PKzRmhQGVsRLXE9E
-                tF0m1nCt2c3Z+PPK3EmuuMGGxfB0nzkEigWo2at8XbmCtcO/5pWonk+1ODsozdidoKVTIq
-                hMDWX/UifHnf24r9gWio19Dz2YSWl7NMvi9Q/W8wq9lzqRGsi8SqLOH1RQrR+R1lhESJmR
-                grng+O7HiZNG8AAAWQshvLWgeX0tGrtP0jSj78PmcWdjhPhOJpsaiC7OKgPcOG5KhmlZkj
-                8rqEEfxZ5YL8GS2LdGH+Sz8pN+NdKsvWk2Neyf5pXRAQRr1KycTMjIWa4hfN8CEepcM7FZ
-                kAoOOjaiAwJ8e54wJgjIR3FidHFyPQ1RRR3kcNHHsDT1R+5a6l+wSlOWH16IOEfo1giFc+
-                JH2DyLjre6gzrvhUsy08KNreBdgBWqjGTo40Q5ECtiOIGJzEGQ406691HqTrLEJ+S6og2x
-                pWIpGk//bysBrZDaYZiy7uwBHP4BQj7q0MmdR0mRkwoY1Bng1q2GReG1g+ksTRqGCEAj0S
-                EUAS12dhvrIxG+ltpcHJ4xWqyX355cBc110hDjr974aDgawrpzVTibjfJcaccRUftfxHUo
-                U76yI8ZsLDvUIpP3DP++zOVSya0HoEW88MWops7/1eo/polFHyrc5y0NtOVhDC9JpSyk8Y
-                XFebP2cSYGj2+ZRHXvw5fcoP+vZiC1BW5hoWQQiUub0bzQGk3eH1yXyk2I5P9lsFkeDKtr
-                EApoM00eyQVxJox9k4n4BKwIVMFhtUvAz1hiTRKepB5hI4AMaGa7gZiwLy4txXxrx//a+L
-                8nUUjVV8u6alIaw17TLV7rCvnHef4edrx9wpWqN4yVG9XArypd3vSvHgBOvBwfzbfWPl0Z
-                TdgVxjOHM83CGzaCF8U8231gxZqtnyXsDaDGnIDKdcUoudQ0zEONEl08bKFyLQGa9+2loL
-                Qlz8eoPwIEGCZlcasyPggC4+cuufBTepR3H9GHMIM9f2ov0D0Hi7QRacuD43UoMQnLowAT
-                1teFr9aLt7xBWYKbdENZh99OlzyE1pb1A4A9FImmVunNcCVF+TPiwIur7rNmtECrFIAnWz
-                mh2TPCVDEH6ZTxuh9KKFTh4Jgxv3IlXaj9SB187f0fBldcglSQrTCen2JJTmBHxfw93J4h
-                MNRwxCnH0FyIpoAxgaNlWGZS5u75kkHE4BSccdXyi98NrPZwg/l+WpFE619WIxo3Yln0pE
-                vqvDOp04wh1Zb1eFrJOaDfKd9Hh3wLjoqa0WWtHBsEJOfl/v/A4LGMjEkkmmBKeW/WB8jM
-                Vh/EKIzRjibAuGOhXmoamUqsEO8V5agtEVRyOQy/xnVlB8kObQQdhMiM+Qoe9YJcUxWgPo
-                gDQfddtfq6V8/sbqW/gekd77wFC71T7wfVZZjs307CDh+jWxuytXDidTjagXtEdOt0cETV
-                IxSPstNBqJsyskgI/qw9YMNak9cAZiqnBIp0lg+AP9P1OJ6mnz6/VGiDdxmoIRwcMobr/E
-                GDYwoj9i04Zvodl5fk6Plequ6rnywmIMwREPNpnqlVErZS+n1Iw+dvBK5Os3P6Rgnmj2tc
-                TdpZ1esQ9ljy4KsvZPcwMKWXT4+qwifFG+GfUeADnvgUrKHk31UMdTCkEQ/99umldhoajA
-                uEiK8nPmLvj9KaFijFParoOCJFSFucxtOfmp9zSWqkQ+TgNuFvgSplQmzTRHT6hBc/8fw9
-                HW55VkX7Zl8WUUvN/Sg76kwoJgaKXqqBBKRfWTKcMgD5AlvOVFHvaFrEPuUnlW4qeZP4h+
-                BVJR3/XEFFVcxzNKolSNJOJs/Ae6W5Nx7cKkFJX2/nBXTKIK0BsJilqW+Iflpxbw+xEaqm
-                iyjIPStEMUH0OlqoXEaIqc1MFshuzo0a3Ocgd3abQtwbdWDc3wCQBpqIxyuWDbXK4Y1SMN
-                Da5SimV9w/8NlDpMkbGrRwji58Vx6TJs7IjemyNR8z3KRisJT3m8bUtt9Kz5wsaDiGWTSF
-                P8lTddmSLboCr0bgFazxxaiBJiGhnCJtB3fSjL6lqWhqju9y/MoHAnbRwoyhvxbkuIabl+
-                hzAfWK3EHc+s7wPfmLTYasA3gVU=
+                b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+                NhAAAAAwEAAQAAAYEAxfB9g/OXYmlRaOB5hB2KL/xGNYA1rcVEUUdZoxC1/v3cB7RFaWdc
+                XCYM5o6RmBVtoY01JlMP0kQ3e8lcrkD0m8RQ6vndAw/fTnbMipA+lXm1RdKrvtGjcTJVuT
+                o3km80Zgy4lMCYoegJM9tBNYmIjXeSEAhDmMovfNA2fnN8yCUj+RhUqKHl6YKvwhjy9grN
+                rCtzAnioXMBMef6S3kDCCM2Q2S6M1gpNuC//NFZWZ3LKnOgV7H3Q/Hf0iJFK7DUBuoG0NA
+                rt6a8eGsRHBcZBshBnv/fasHkO1+zYo/aenN3uCy7DqqCrNKK5sPav7uxFBQDerBW8IXFc
+                f58vXatJnGnQ/UbVsKhx1/61IjwQWaxVNDq4U6+kjbnN6vshMfg9xky9YfDslEjIXKksOa
+                8uLr4jwt+9eu+iHKPSu2gESNk2Ddz0cgUfiUwuysULAVpsVcs4VxZTA1yTd6jifzWgxqPO
+                IUrnQI1HKywG8lfzcMNMSwfpZKBnBH7X3uSNlU0VAAAFiLFHF2uxRxdrAAAAB3NzaC1yc2
+                EAAAGBAMXwfYPzl2JpUWjgeYQdii/8RjWANa3FRFFHWaMQtf793Ae0RWlnXFwmDOaOkZgV
+                baGNNSZTD9JEN3vJXK5A9JvEUOr53QMP3052zIqQPpV5tUXSq77Ro3EyVbk6N5JvNGYMuJ
+                TAmKHoCTPbQTWJiI13khAIQ5jKL3zQNn5zfMglI/kYVKih5emCr8IY8vYKzawrcwJ4qFzA
+                THn+kt5AwgjNkNkujNYKTbgv/zRWVmdyypzoFex90Px39IiRSuw1AbqBtDQK7emvHhrERw
+                XGQbIQZ7/32rB5Dtfs2KP2npzd7gsuw6qgqzSiubD2r+7sRQUA3qwVvCFxXH+fL12rSZxp
+                0P1G1bCocdf+tSI8EFmsVTQ6uFOvpI25zer7ITH4PcZMvWHw7JRIyFypLDmvLi6+I8LfvX
+                rvohyj0rtoBEjZNg3c9HIFH4lMLsrFCwFabFXLOFcWUwNck3eo4n81oMajziFK50CNRyss
+                BvJX83DDTEsH6WSgZwR+197kjZVNFQAAAAMBAAEAAAGBAIDLGbCJCIC1TI50OT04x1ivyr
+                M3KDZYfDpytaV/0xwG7Gtq5htOcO9Ypt5B+ARANSSAMAwu0cWcM4ntHMwZYdAU7h3m1OMQ
+                KdnxPOgQMVirZ8L18GBqIfIesV6jvdMfXrXkIxpPM0FuLMa8LHL8eYirO7QI3IsHS9zn0f
+                13gcLtP7nuFe/f4CyPp3MhLr3fi7IyV1RNVCd9zIU4mzHYayi1MUHPoz4GWEm3mVPhtbj8
+                HU/5R4Ko3xnXp5pRB7IoTkFU5y4zDkdye9yAsbsHOlBrUw5yJz7yzPQsacJ+QxFpL4QYzV
+                6RGRs87tAsPnSSfvxFexv+XOW68q2wouMIjUYQPs/6dtIX9OZ3GNyUXfrdFo2C7ICjbJm6
+                AXSnM1uo2oqWlrdFKhOlpzs3qMBKC7ZtAQNZeQkmZ0okDmE7ZxQFR4GVf6yUhfc0KVgp/i
+                ApXlwTc1l/nFsH8FFm+FYEqXShsBYB9BQKrkg38eklMqP0tsBeBTX3927jTfiddEdBJQAA
+                AMA9NL8rBnui9J2r7+WqFZmQ0HmtGVKPdxqrBkgKguUPk3e19nUyx66X0DEqEOGJNDSucI
+                CJvIW4fVXd5K2Z0Jz5WuAXcuPppbTOxymAXcAZoYn1L9O/fNO6K8X0QAfnTWMTZDZgBOKm
+                HRy1MRz3koEgK004Un2jMaJ23raD54MsggVln0tuW4TG27sn5ujflDEbVpV5R9HeffmXem
+                xvJz3O5YxCZnO26Oa0JS2YtWJyERfcq+wyaeVyHEJMOMhoaGUAAADBAOxf6/1N3boJqTR0
+                LTxFXA9h/mwLshVPwnkRmIFAiJK3aX9zmLZBh4+zUxZndEWdgMDMSTNdzn7+O8IEHwCr3E
+                Hx1oRmLF3X64PfkDeEq6Hwwwk0lW6r4soS/u9LjCnPf2/d8RIELyvTKJ4EGCEBROXckxyy
+                N6naAsQCXmrfvrXDDj41qz3Two43W+LiSpdT561zAxX3j++wtUSoBUZckFB9a4QC5w02hV
+                geIknnwhhzq3+00T1mYfOtowd7nYisUwAAAMEA1l+jJ5c4q2gI40isV5KTI8wNkwWxUDWf
+                rcxL8E6jrBOmVLPjkqDs+dcLg7wIOdaQjJQpHVbFYbXy0T2f56XlzO5YyHxv4Vpa7xqIHK
+                Bu7xnbVUKypBVF7sONJxYEVBT9yL9Xy184psstnb3CJS98tKSApew6aswOFJMpzjac1JY0
+                EJRWgDMmH74vvs8WxvKytNtM2QdWgLVEX7VcoXxn88lp0G91zL/bAMStAa1WhEPq2EZvlG
+                0X/TMs9Bv5w7P3AAAADXBhbmRhQHZhZ3JhbnQBAgMEBQ==
                 -----END OPENSSH PRIVATE KEY-----
           scope: GLOBAL
 tool:
@@ -73,8 +85,10 @@ tool:
           installers:
           - sonarRunnerInstaller:
               id: "4.7.0.2747"
-
+ 
 unclassified:
+  location:
+    url: "http://192.168.44.44:8880/"
   sonarGlobalConfiguration:
     buildWrapperEnabled: true
     installations:
