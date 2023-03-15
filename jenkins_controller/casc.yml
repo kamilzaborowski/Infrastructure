@@ -38,42 +38,11 @@ credentials:
             directEntry:
               privateKey: |
                 -----BEGIN OPENSSH PRIVATE KEY-----
-                b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
-                NhAAAAAwEAAQAAAYEAxfB9g/OXYmlRaOB5hB2KL/xGNYA1rcVEUUdZoxC1/v3cB7RFaWdc
-                XCYM5o6RmBVtoY01JlMP0kQ3e8lcrkD0m8RQ6vndAw/fTnbMipA+lXm1RdKrvtGjcTJVuT
-                o3km80Zgy4lMCYoegJM9tBNYmIjXeSEAhDmMovfNA2fnN8yCUj+RhUqKHl6YKvwhjy9grN
-                rCtzAnioXMBMef6S3kDCCM2Q2S6M1gpNuC//NFZWZ3LKnOgV7H3Q/Hf0iJFK7DUBuoG0NA
-                rt6a8eGsRHBcZBshBnv/fasHkO1+zYo/aenN3uCy7DqqCrNKK5sPav7uxFBQDerBW8IXFc
-                f58vXatJnGnQ/UbVsKhx1/61IjwQWaxVNDq4U6+kjbnN6vshMfg9xky9YfDslEjIXKksOa
-                8uLr4jwt+9eu+iHKPSu2gESNk2Ddz0cgUfiUwuysULAVpsVcs4VxZTA1yTd6jifzWgxqPO
-                IUrnQI1HKywG8lfzcMNMSwfpZKBnBH7X3uSNlU0VAAAFiLFHF2uxRxdrAAAAB3NzaC1yc2
-                EAAAGBAMXwfYPzl2JpUWjgeYQdii/8RjWANa3FRFFHWaMQtf793Ae0RWlnXFwmDOaOkZgV
-                baGNNSZTD9JEN3vJXK5A9JvEUOr53QMP3052zIqQPpV5tUXSq77Ro3EyVbk6N5JvNGYMuJ
-                TAmKHoCTPbQTWJiI13khAIQ5jKL3zQNn5zfMglI/kYVKih5emCr8IY8vYKzawrcwJ4qFzA
-                THn+kt5AwgjNkNkujNYKTbgv/zRWVmdyypzoFex90Px39IiRSuw1AbqBtDQK7emvHhrERw
-                XGQbIQZ7/32rB5Dtfs2KP2npzd7gsuw6qgqzSiubD2r+7sRQUA3qwVvCFxXH+fL12rSZxp
-                0P1G1bCocdf+tSI8EFmsVTQ6uFOvpI25zer7ITH4PcZMvWHw7JRIyFypLDmvLi6+I8LfvX
-                rvohyj0rtoBEjZNg3c9HIFH4lMLsrFCwFabFXLOFcWUwNck3eo4n81oMajziFK50CNRyss
-                BvJX83DDTEsH6WSgZwR+197kjZVNFQAAAAMBAAEAAAGBAIDLGbCJCIC1TI50OT04x1ivyr
-                M3KDZYfDpytaV/0xwG7Gtq5htOcO9Ypt5B+ARANSSAMAwu0cWcM4ntHMwZYdAU7h3m1OMQ
-                KdnxPOgQMVirZ8L18GBqIfIesV6jvdMfXrXkIxpPM0FuLMa8LHL8eYirO7QI3IsHS9zn0f
-                13gcLtP7nuFe/f4CyPp3MhLr3fi7IyV1RNVCd9zIU4mzHYayi1MUHPoz4GWEm3mVPhtbj8
-                HU/5R4Ko3xnXp5pRB7IoTkFU5y4zDkdye9yAsbsHOlBrUw5yJz7yzPQsacJ+QxFpL4QYzV
-                6RGRs87tAsPnSSfvxFexv+XOW68q2wouMIjUYQPs/6dtIX9OZ3GNyUXfrdFo2C7ICjbJm6
-                AXSnM1uo2oqWlrdFKhOlpzs3qMBKC7ZtAQNZeQkmZ0okDmE7ZxQFR4GVf6yUhfc0KVgp/i
-                ApXlwTc1l/nFsH8FFm+FYEqXShsBYB9BQKrkg38eklMqP0tsBeBTX3927jTfiddEdBJQAA
-                AMA9NL8rBnui9J2r7+WqFZmQ0HmtGVKPdxqrBkgKguUPk3e19nUyx66X0DEqEOGJNDSucI
-                CJvIW4fVXd5K2Z0Jz5WuAXcuPppbTOxymAXcAZoYn1L9O/fNO6K8X0QAfnTWMTZDZgBOKm
-                HRy1MRz3koEgK004Un2jMaJ23raD54MsggVln0tuW4TG27sn5ujflDEbVpV5R9HeffmXem
-                xvJz3O5YxCZnO26Oa0JS2YtWJyERfcq+wyaeVyHEJMOMhoaGUAAADBAOxf6/1N3boJqTR0
-                LTxFXA9h/mwLshVPwnkRmIFAiJK3aX9zmLZBh4+zUxZndEWdgMDMSTNdzn7+O8IEHwCr3E
-                Hx1oRmLF3X64PfkDeEq6Hwwwk0lW6r4soS/u9LjCnPf2/d8RIELyvTKJ4EGCEBROXckxyy
-                N6naAsQCXmrfvrXDDj41qz3Two43W+LiSpdT561zAxX3j++wtUSoBUZckFB9a4QC5w02hV
-                geIknnwhhzq3+00T1mYfOtowd7nYisUwAAAMEA1l+jJ5c4q2gI40isV5KTI8wNkwWxUDWf
-                rcxL8E6jrBOmVLPjkqDs+dcLg7wIOdaQjJQpHVbFYbXy0T2f56XlzO5YyHxv4Vpa7xqIHK
-                Bu7xnbVUKypBVF7sONJxYEVBT9yL9Xy184psstnb3CJS98tKSApew6aswOFJMpzjac1JY0
-                EJRWgDMmH74vvs8WxvKytNtM2QdWgLVEX7VcoXxn88lp0G91zL/bAMStAa1WhEPq2EZvlG
-                0X/TMs9Bv5w7P3AAAADXBhbmRhQHZhZ3JhbnQBAgMEBQ==
+                b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+                QyNTUxOQAAACAz4w8m7yi6dHnM6HrfUyKeTGezV5VNhgQ0GWv4g5vm5QAAAJAGeyE8Bnsh
+                PAAAAAtzc2gtZWQyNTUxOQAAACAz4w8m7yi6dHnM6HrfUyKeTGezV5VNhgQ0GWv4g5vm5Q
+                AAAEC/TAWcMUFgozRroG43/VCdFOE1PGj2HxjKYNhMU4cHtjPjDybvKLp0eczoet9TIp5M
+                Z7NXlU2GBDQZa/iDm+blAAAADXBhbmRhQHZhZ3JhbnQ=
                 -----END OPENSSH PRIVATE KEY-----
           scope: GLOBAL
 tool:

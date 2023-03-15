@@ -43,8 +43,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     restart: always
     environment:
-      - JENKINS_AGENT_SSH_PUBKEY='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDF8H2D85diaVFo4HmEHYov/EY1gDWtxURRR1mjELX+/dwHtEVpZ1xcJgzmjpGYFW2hjTUmUw/SRDd7yVyuQPSbxFDq+d0DD99OdsyKkD6VebVF0qu+0aNxMlW5OjeSbzRmDLiUwJih6Akz20E1iYiNd5IQCEOYyi980DZ+c3zIJSP5GFSooeXpgq/CGPL2Cs2sK3MCeKhcwEx5/pLeQMIIzZDZLozWCk24L/80VlZncsqc6BXsfdD8d/SIkUrsNQG6gbQ0Cu3prx4axEcFxkGyEGe/99qweQ7X7Nij9p6c3e4LLsOqoKs0ormw9q/u7EUFAN6sFbwhcVx/ny9dq0mcadD9RtWwqHHX/rUiPBBZrFU0OrhTr6SNuc3q+yEx+D3GTL1h8OyUSMhcqSw5ry4uviPC371676Ico9K7aARI2TYN3PRyBR+JTC7KxQsBWmxVyzhXFlMDXJN3qOJ/NaDGo84hSudAjUcrLAbyV/Nww0xLB+lkoGcEftfe5I2VTRU='
-
+      - JENKINS_AGENT_SSH_PUBKEY=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDPjDybvKLp0eczoet9TIp5MZ7NXlU2GBDQZa/iDm+bl
   sonarqube:
     image: sonarqube:9.2.4-community
     container_name: sonarqube
