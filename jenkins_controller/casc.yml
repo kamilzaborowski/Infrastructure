@@ -20,11 +20,7 @@ jenkins:
           sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
       name: "agent"
       remoteFS: "/home/jenkins/agent"
-      retentionStrategy: "always"
-  jobs:
-    - file: /usr/share/jenkins/ref/jobs/app_of_apps.groovy
-    - file: /usr/share/jenkins/ref/jobs/backend.groovy
-    - file: /usr/share/jenkins/ref/jobs/frontend.groovy
+      retentionStrategy: "always"
  
 credentials:
   system:
@@ -49,6 +45,12 @@ credentials:
                 Z7NXlU2GBDQZa/iDm+blAAAADXBhbmRhQHZhZ3JhbnQ=
                 -----END OPENSSH PRIVATE KEY-----
           scope: GLOBAL
+
+jobs:
+    - file: /usr/share/jenkins/ref/jobs/app_of_apps.groovy
+    - file: /usr/share/jenkins/ref/jobs/backend.groovy
+    - file: /usr/share/jenkins/ref/jobs/frontend.groovy
+
 tool:
   sonarRunnerInstallation:
     installations:
