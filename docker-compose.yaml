@@ -29,10 +29,8 @@ services:
       - "8880:8080"
       - "50000:50000"
     volumes:
+      - ./jenkins_controller/jobs:/usr/share/jenkins/ref/jobs/
       - ./jenkins_controller/casc.yml:/usr/share/jenkins/ref/casc.yml
-      - ./jenkins_controller/jobs/app_of_apps.groovy:/usr/share/jenkins/ref/jobs/app_of_apps.groovy
-      - ./jenkins_controller/jobs/backend.groovy:/usr/share/jenkins/ref/jobs/backend.groovy
-      - ./jenkins_controller/jobs/frontend.groovy:/usr/share/jenkins/ref/jobs/frontend.groovy
     restart: always
 
   jenkins_agent:
