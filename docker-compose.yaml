@@ -28,10 +28,10 @@ services:
     ports:
       - "8880:8080"
       - "50000:50000"
-    volumes:
-      - "./jenkins_controller/jobs:/usr/share/jenkins/ref/jobs/"
-      - "./jenkins_controller/casc.yml:/usr/share/jenkins/ref/casc.yml"
     restart: always
+    volumes:
+      - ./jenkins_controller/jobs/:/usr/share/jenkins/ref/jobs
+      - ./jenkins_controller/casc.yml:/usr/share/jenkins/ref/casc.yml
 
   jenkins_agent:
     build: ./jenkins_agent/

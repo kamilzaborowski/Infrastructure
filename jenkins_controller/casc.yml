@@ -44,11 +44,11 @@ credentials:
                 Z7NXlU2GBDQZa/iDm+blAAAADXBhbmRhQHZhZ3JhbnQ=
                 -----END OPENSSH PRIVATE KEY-----
           scope: GLOBAL
-
 jobs:
   - file: /usr/share/jenkins/ref/jobs/app_of_apps.groovy
   - file: /usr/share/jenkins/ref/jobs/backend.groovy
   - file: /usr/share/jenkins/ref/jobs/frontend.groovy
+
 tool:
   sonarRunnerInstallation:
     installations:
@@ -69,3 +69,11 @@ unclassified:
       triggers:
         skipScmCause: false
         skipUpstreamCause: false
+terraform:
+    installations:
+    - name: "Terraform"
+      properties:
+      - installSource:
+          installers:
+          - terraformInstaller:
+              id: "1.4.4-linux-amd64"
